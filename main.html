@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html ng-app="demon">
+<head>
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Handlee|Philosopher|Play|Titillium+Web:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+<body ng-controller="SelectTabs as panel">
+    <header class="header container">
+    <div class="row">
+        <div class="col-md-9 head-img">
+            <img class="img-responsive" src="images/demonitisation collage 3.jpg">
+        </div>
+        <div class="col-md-3 starter">
+        Do you want to know about DEMONETISATION<br><br>
+        <a href id="opener">Click Here</a>
+        </div>
+        <div class="col-md-3 final">
+        Here you go !
+        </div>
+    </div>
+    </header>
+    <div class="content container">
+        <div class="row">
+            <ul class="col-md-3 sidebar nav nav-pills nav-stacked">
+                <li role="presentation" ng-class="{active: panel.isSelect(1)}"><a href ng-click="panel.curTab(1)">About</a></li>
+                <li role="presentation" ng-class="{active: panel.isSelect(2)}"><a href ng-click="panel.curTab(2)">Reactions</a></li>
+                    <ul class="sublist" ng-show="panel.isSelect(2)">
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#criticism">Criticism</a></li>
+                    <li><a href="#opposition">Opposition</a></li>
+                    <li><a href="#strikes">Strikes</a></li>
+                    </ul>
+                <li role="presentation" ng-class="{active: panel.isSelect(3)}"><a href ng-click="panel.curTab(3)">Effects</a></li>
+                    <ul class="sublist" ng-show="panel.isSelect(3)">
+                    <li><a href="#cashRush">Cash rush</a></li>
+                    <li><a href="#stock">Stock market crash</a></li>
+                    <li><a href="#trans">Transportation halts</a></li>
+                    <li><a href="#agri">Agriculture</a></li>
+                    <li><a href="#banking">Banking</a></li>
+                    <li><a href="#business">Business</a></li>
+                    <li><a href="#tax">Income tax raids and cash seizures</a></li>
+                    </ul>
+                <li role="presentation" ng-class="{active: panel.isSelect(4)}"><a href ng-click="panel.curTab(4)">FAQs</a></li>
+                    <ol class="sublist" ng-show="panel.isSelect(4)">
+                    <li><a href="#q1">Why is this scheme introduced?</a></li>
+                    <li><a href="#q2">What is this scheme?</a></li>
+                    <li><a href="#q3">Does the scheme apply to pre 2005 banknotes of ₹ 500 and ₹ 1000?</a></li>
+                    <li><a href="#q4">How much value will I get?</a></li>
+                    <li><a href="#q5">Can I get cash in exchange for specified banknotes over the bank counter?</a></li>
+                    </ol>
+                <li role="presentation" ng-class="{active: panel.isSelect(5)}"><a href ng-click="panel.curTab(5)">Add a review</a></li>
+            </ul>
+            <div class="text col-md-9">
+                <button class="btn btn-default" id="topbutton"><a href="#top">Top</a></button>
+                <blockquote class="about" ng-show="panel.isSelect(1)">
+                <h1>About</h1>
+                <hr>
+                <p>The demonetisation of ₹500 and ₹1,000 banknotes was a policy enacted by the Government of India on 8 November 2016, ceasing the usage of all ₹500 (US$7.40) and ₹1,000 (US$15) banknotes of the Mahatma Gandhi Series as legal tender in India from 9 November 2016.[2]</p>
+
+                <p>The announcement was made by the Prime Minister of India Narendra Modi in an unscheduled live televised address at 20:15 Indian Standard Time (IST) on 8 November.[3][4] In the announcement, Modi declared that use of all ₹500 and ₹1,000 banknotes of the Mahatma Gandhi Series would be invalid after midnight of that day, and announced the issuance of new ₹500 and ₹2,000 banknotes of the Mahatma Gandhi New Series in exchange for the old banknotes. However, the banknote denominations of ₹100, ₹50, ₹20, ₹10 and ₹5 of the Mahatma Gandhi Series and ₹2 and ₹1 remained legal tender and were unaffected by the policy.</p>
+
+                <p>The government claimed that the demonetisation was an effort to stop counterfeiting of the current banknotes allegedly used for funding terrorism, as well as a crack down on black money in the country.[5][6] The move was also described as an effort to reduce corruption, the use of drugs, and smuggling.[7][8]</p>
+
+                <p>However, in the days following the demonetisation, banks and ATMs across the country faced severe cash shortages.[9][10] with severe detrimental effects on a number of small businesses, agriculture, and transportation. People seeking to exchange their notes had to stand in lengthy queues, and several deaths were linked to the inconveniences caused due to the rush to exchange cash.[11][12] Also, following the announcement, the BSE SENSEX and NIFTY 50 stock indices crashed for the next two days.[13]</p>
+
+                <p>Initially, the move received support from several bankers as well as from some international commentators. It was heavily criticised by members of the opposition parties, leading to debates in both houses of parliament and triggering organised protests against the government in several places across India.[14][15][16] As the cash shortages grew in the weeks following the move, the demonetisation was heavily criticised by several economists</p>
+                </blockquote>
+
+                <blockquote class="reactions" ng-show="panel.isSelect(2)">
+                <h1>Reactions</h1>
+                <hr>
+                <h3 id="support">Support</h3>
+                <p>The decision met with mixed initial reactions Several bankers like Arundhati Bhattacharya (Chairperson of State Bank of India) and Chanda Kochhar (MD & CEO of ICICI Bank) appreciated the move in the sense that it would help curb black money.[62] Businessmen Anand Mahindra (Mahindra Group), Sajjan Jindal (JSW Group), Kunal Bahl (Snapdeal and FreeCharge) also supported the move adding that it would also accelerate e-commerce.[62] Infosys founder N. R. Narayana Murthy praised the move.[63][64]</p>
+
+                <p>Finance Minister Arun Jaitley said that demonetisation would clean the complete economic system, increase the size of economy and revenue base. He mentioned the demonetisation along with the upcoming Goods and Services Tax (GST) as "an attempt to change the spending habit and lifestyle."[65]</p>
+
+                <p>The Indian National Congress spokesperson Randeep Surjewala welcomed the move but remained sceptical on the consequences that would follow.[66] Chief Minister of Bihar Nitish Kumar supported the move.[67][68][69] The demonetisation also got support from Chief Minister of Andhra Pradesh Nara Chandrababu Naidu.[70][71][72] Former Chief Election Commissioner of India S. Y. Quraishi said demonetisation could lead to long term electoral reforms.[73] Indian social activist Anna Hazare hailed demonetisation as a revolutionary step.[74][75][76] The President of India Pranab Mukherjee welcomed the demonetisation move by calling it bold step.[77][78][79][80] The opinion of the masses varied both ways on micro-blogs and social media sites like Twitter.[81]</p>
+
+                <p>By and large, international response was positive which saw the move as a bold crackdown on corruption.[82][83][84] International Monetary Fund (IMF) issued a statement supporting Modi's efforts to fight corruption by the demonetisation policy.[82]
+
+                <p>Chinese state media Global Times praised the move and termed it as "fierce fight against black money and corruption."[83] Former Prime Minister of Finland and Vice-President of European Commission Jyrki Katainen welcomed the demonetisation move stressing that bringing transparency will strengthen Indian economy.[85][86] BBC's South Asia Correspondent Justin Rowlatt in his article praised the move for its secrecy and success and elaborated on reason behind demonetisation.[87]Tim Worstall termed the demonetisation as welcome macroeconomic effect in his article in Forbes magazine.[88] Swedish Minister of Enterprise Mikael Damberg supported the move by calling it bold decision.[84]</p>
+
+                <p>Singapore-based paper The Independent published a laudatory article on the move titled "Modi does a Lee Kuan Yew to stamp out corruption in India." Lee Kuan Yew was the Singaporean Prime Minister and is considered the architect of modern Singapore. "From making up his mind to rolling it out, a new Lee Kuan Yew is born in India. It will be reflected in the legacy of this Prime Minister," the article said.[89]</p>
+
+                <h3 id="criticism">Criticism</h3>
+                <p>The Indian Supreme Court while hearing one among a slew of cases filed against the sudden demonetisation decision in various courts,[90] observed that it "appears to be carpet bombing and not surgical strike" which government repeatedly claims it to be.</p>
+
+                <p>Nobel laureate Indian economist Amartya Sen, severely critcized the demonetisation move calling it a "despotic action" among other things.[92][93]</p>
+
+                <p>Former Senior Vice-President and Chief Economist of the World Bank, Kaushik Basu, called it a 'major mistake' and said that the 'damage' is likely to be much greater than any possible benefits.[94][95][96]</p>
+
+                <p>Pronab Sen, former Chief Statistician and Planning Commission of India member, called it a "hollow move" since it did not really address any of the purported goals of tackling black money or fake currency.[97]</p>
+
+                <p>Prabhat Patnaik, a former professor of economics at the Jawaharlal Nehru University, Delhi called the move 'witless' and 'anti-people'. He criticised the simple way in which black money was assumed as "a hoard of cash", saying that it would have little effect in eliminating "black activities" while "causing much hardship to common people.".[98]</p>
+
+                <p>Noted economist and journalist, T. N. Ninan wrote in the Business Standard that demonetisation 'looks like a bad idea, badly executed on the basis of some half-baked notions'.[99] Deepak Parekh (Chairman of HDFC) had initially appreciated the decision to ban the Rs. 500 and Rs. 1000 notes, but later said that the move had derailed the economy, and expressed skepticism about its outcome.[100][101]</p>
+
+                <p>Chief Ministers of several Indian states like Mamata Banerjee,[102] Arvind Kejriwal[103] and Pinarayi Vijayan[104] have criticized and led major protests against the decision in their states and in parliament. Initially, the move to demonetise and try to hinder black money was appreciated, but the manner in which it was carried out by causing hardships to common people was criticised.[105] A Public Interest Litigation (PIL) was filed in Madras High Court by M Seeni Ahamed, General Secretary of the Indian National League, to scrap the decision. The High Court dismissed the PIL stating that it could not interfere in monetary policies of the government.[106] Similar PILs were also filed in the Supreme Court of India.[107] Supreme Court of India is yet to decide on the matter. It is listed for hearing on 2 December 2016.</p>
+
+                <p>Several government ministers had declared before the demonetisation that they were holding large amounts of cash, including Arun Jaitley, who had more than 65 lakh rupees in cash. This led to speculation about whether and when the ministers had deposited the cash they held.[108][109]</p>
+
+                <p>Steve Forbes described the move as 'Sickening And Immoral'.[110]
+
+                <h3 id="opposition">Opposition</h3>
+                <p>A Congress-led opposition, which includes 13 political parties, opposed the current government on the demonetisation issue in the Winter Session of the Indian Parliament on 16 November 2016. The Chief Minister of West Bengal Mamata Banerjee also met the President Pranab Mukherjee to oppose the demonetisation.[111][112][113][114][115][116] The debate on demonetisation is known to be initiated by Indian National Congress[117] and Anand Sharma in the Rajya Sabha on 16 November 2016,[118][119] while Banerjee is known to be the first to oppose the current government on the demonetisation.[120]</p>
+
+                <p>On 16 November 2016, Banerjee led a rainbow delegation comprising political parties of Trinamool Congress, Aam Aadmi Party, BJP ally Shiv Sena, Patidar Anamat Andolan Samiti (of Hardik Patel) and National Conference to Rashtrapati Bhawan to protest against the decision to withdraw the ₹500 and ₹1000 banknotes. A memorandum was submitted to the President of India Pranab Mukherjee demanding rollback of the decision.[121] Outside the Parliament in a rally the same day, Saugata Roy, a member of parliament from the opposition Trinamool Congress Party, commented, "People are in utter distress, especially the informal sector is totally disrupted. Poor people, daily wage earners, they're all facing difficulty"[11]</p>
+
+                <p>In the demonetisation debate on the first day of the Winter Session of Parliament at the Rajya Sabha, on 16 November 2016, Pramod Tiwari from the Indian National Congress, accused Narendra Modi for the demonetisation[clarification needed] and compared him to Mussolini, Hitler and Qadhafi, while Prem Chand Gupta questioned a statement of Modi from the unscheduled TV broadcast on 8 November, "If it was planned 10 months ago, how did RBI Governor Urjit Patel sign on new note?". While on the other side, Praful Patel criticised the demonetisation by stating "the government was not even prepared to recalibrate the ATMs while announcing the move. People's suffering unimaginable. Nobody is questioning the government's intention, but you are unprepared to execute the move". Later, the former Chief Minister of Uttar Pradesh Mayawati Prabhu Das stated the situiation to "a financial emergency", by saying "It looks as if Bharat has shut down." Also, Sitaram Yechury from Communist Party of India, questioned the government on the demonetisation move by stating "only 6% of black money in India is in cash to drive his point that demonetisation won't curb illicit wealth."[122]</p>
+
+                <p>On 17 November 2016, in a rally against demonetisation of ₹500 and ₹1000 notes, led by the Chief Minister of Delhi Arvind Kejriwal and his West Bengal counterpart Mamata Banerjee at Azadpur Mandi, the biggest vegetable and fruits wholesale hub in the national capital, Arvind Kejriwal demanded the withdraw of demonetisation in 3 days, or else there would be a rebellion, he said. Banerjee also stated "I give the government 3 day ultimatum, fix things or withdraw the demonetisation scheme".[123]</p>
+
+                <p>In the demonetisation debate on the second and third day of the Winter Session of Parliament, on 17 and 18 November 2016, the opposition and the government clashed over the demonetisation issue, bringing the house to continuous halts.[124]</p>
+
+                <p>On 24 November 2016, in the demonetisation debate, the former prime minister of India Manmohan Singh said "this scheme will hurt small industries, the farming sector. The GDP can decline by about 3 per cent due to this move", while he also questioned "I would like to ask the Prime Minister examples of countries where people have deposited their money in the banks and not allowed to withdraw their own money." and later also said "It is no good that on each day banks bring out new notifications. It doesn't reflect properly on Prime Minister's Office, Finance Minister and the Reserve Bank of India. Cooperative banking system has been prevented from handling cash".[125] Singh at last termed the demonetisation move as an "organized loot, legalized plunder of the common people".</p>
+
+                <h3 id="strikes">Strikes</h3>
+                <p>As the demonetisation was opposed in both houses of the parliament, it triggered organised nationwide strikes across India.The Opposition involving parties like Indian National Congress, Bahujan Samaj Party, Trinamool Congress,[127] DMK, JD(U), AIADMK, Nationalist Congress Party, Left, Rashtriya Janata Dal and the Samajwadi Party[128] decided to observe ‘Aakrosh Diwas’ as, a protest campaign day on November 28 [129][130] and launch protests in front of banks, demanding that money be returned to people.[131] In the state of Bihar, 15 trains were blocked and stranded, while the states of West Bengal, Maharashtra and Uttar Pradesh saw protest marches and rallies led by opposition parties.[132] In the state of Kerala, shops and business establishments were shut, with school and colleges closed throughout the state, while movements of private vehicles were also disrupted in Northern Kerala.[132]</p>
+                </blockquote>
+
+                <blockquote class="effects" ng-show="panel.isSelect(3)">
+                <h1>Effects</h1>
+                <hr>
+                <h3 id="cashRush">Cash rush</h3>
+                <p>The scarcity of cash due to demonetisation led to chaos, and most people holding old banknotes faced difficulties exchanging them due to endless lines outside banks and ATMs across India, which became a daily routine for millions of people waiting to deposit or exchange the ₹500 and ₹1000 banknotes since 9 November.[9][10][11][133] ATMs were running out of cash after a few hours of being functional, and around half the ATMs in the country were non-functional.[10] Sporadic violence was reported in New Delhi, but there were no reports of any grievous injury,[134] people attacked bank premises and ATMs,[135][136][137][138][139][140] and a ration shop was looted in Madhya Pradesh after the shop owner refused to accept ₹500 banknotes.[141][142][143][144]</p>
+
+                <p>Several people were reported to have died from standing in queues for hours to exchange their old banknotes.[145][146][147][148][149][150] Deaths were also attributed to lack of medical help due to refusal of old banknotes by hospitals.[151][152][153] As of 15 November 2016, the attributed death toll was 25.[12][154][155] In an interview, Chief Minister of Delhi Arvind Kejriwal lashed out at a BBC reporter who asked him to justify his 19 November claim that 55 deaths were linked to demonetisation.[156] While, the CMD of Punjab National Bank said that panic after demonetisation started fading on 19 November 2016.[157] As of 18 December 2016, there were still long queues at banks and ATMs.[158][159]</p>
+
+                <h3 id="stock">Stock market crash</h3>
+                <p>As a combined effect of demonetisation and US presidential election, the stock market indices dropped to an around six-month low in the week following the announcement. The day after the demonetisation announcement, BSE SENSEX crashed nearly 1,689 points and NIFTY 50 plunged by over 541 points.[13] By the end of the intraday trading section on 15 November 2016, the BSE SENSEX index was lower by 565 points and the NIFTY 50 index was below 8100 intraday.[160]</p>
+
+                <h3 id="trans">Transportation halts</h3>
+                <p>After the demonetisation was announced, about 800,000 truck drivers were affected with scarcity of cash, with around 400,000 trucks stranded at major highways across India were reported.[161] While major highway toll junctions on the Gujarat and Delhi-Mumbai highways also saw long queues as toll plaza operators refused the old banknotes.</p>
+
+                <h3 id="agri">Agriculture</h3>
+                <p>Transactions in the Indian agriculture sector are heavily dependent on cash and were adversely affected by the demonetisation of ₹500 and ₹1,000 banknotes.[164] Due to scarcity of the new banknotes, makny farmers have unsufficient cash to purchase seeds, fertilisers and pesticides needed for the plantation of rabi crops usually sown around mid-November.[165] Farmers and their unions conducted protest rallies in Gujarat, Amritsar and Muzaffarnagar against the demonetisation as well as against restrictions imposed by the Reserve Bank of India on district cooperative central banks which were ordered not to accept or exchange the demonetised banknotes.[166][167][168][169]</p>
+
+                <h3 id="banking">Banking</h3>
+                <p>A State Bank of India branch remained open at night, and a long queue of people waited outside the ATM to withdraw money
+                In the first four days after the announcement of the step, about ₹3 trillion (US$45 billion) in the form of old ₹500 and ₹1,000 banknotes had been deposited in the banking system and about ₹500 billion (US$7.4 billion) had been dispensed via withdrawals from bank accounts, ATMs as well as exchanges over the bank counters. Within these four days, the banking system has handled about 180 million transactions.[33] The State Bank of India reported to have received more than ₹300 billion (US$4.5 billion) in bank deposit in first two days after demonetisation.[170][171][172] A spike in the usage of debit card and credit card post demonetisation was also reported.[173]</p>
+
+                <p>Between November 10 and November 27, banks reported exchange and deposits of demonetised banknotes worth ₹8.45 trillion (US$130 billion) (exchange of ₹339.48 billion (US$5.0 billion) and deposits of ₹8.11 trillion (US$120 billion)). During this period, an amount of ₹2.16 lakh crore (US$32 billion) had been withdrawn by people from their accounts.[174]</p>
+
+                <p>In Malda, a district believed to be a transit-point for fake Indian currencies,[175] a large sum of cash deposits in dormant accounts were also reported. According to The Economic Times, more than 80 percent of fake currency in India originates from Malda district in West Bengal.[176]</p>
+
+                <h3 id="business">Business</h3>
+                <p>By the second week after demonetisation of ₹500 and ₹1,000 banknotes, cigarette sales across India witnessed a fall of 30–40%,[177] while E-commerce companies saw up to a 30% decline in cash on delivery (COD) orders.[178][179] Several e-commerce companies hailed the demonetisation decision as an impetus to an increase in digital payments. They believe that it would lead to a decline in COD returns which is expected to cut down their costs.[180]</p>
+
+                <p>The demand for point of sales (POS) or card swipe machines has increased.[181] E-payment options like PayTM and PayUMoney has also seen a rise.[182] According to data of Pine Labs, the demand for its POS machines doubled after the decision. Further it states that the debit card transactions rose by 108% and credit card transactions by 60% on 9 November 2016.[181]</p>
+
+                <h3 id="tax">Income tax raids and cash seizures</h3>
+                <p>The Finance Ministry instructed all revenue intelligence agencies to join the crackdown on forex traders, hawala operators and jewellers besides tracking movement of demonetised currency notes.[183]</p>
+
+                <p>Income Tax departments raided various illegal tax-evasive businesses in Delhi, Mumbai, Chandigarh, Ludhiana and other cities that traded with demonetised currency.[184] The Enforcement Directorate issued several FEMA notices to forex and gold traders.[183] Large sum of cash in defunct notes were seized in different parts of the country.[185][186][187][188][189][190] In Chhattisgarh liquid cash worth of ₹4.4 million (US$65,000) was seized.[191]</p>
+                </blockquote>
+
+                <blockquote class="faqs" ng-show="panel.isSelect(4)">
+                <h1>Frequently Asked Questions(FAQs)</h1>
+                <hr>
+                <h3 id="q1">1. Why is this scheme introduced?</h3>
+                <p>The incidence of fake Indian currency notes in higher denomination has increased. For ordinary persons, the fake notes look similar to genuine notes, even though no security feature has been copied. The fake notes are used for antinational and illegal activities. High denomination notes have been misused by terrorists and for hoarding black money. India remains a cash based economy hence the circulation of Fake Indian Currency Notes continues to be a menace. In order to contain the rising incidence of fake notes and black money, the scheme to withdraw has been introduced.</p>
+
+                <h3 id="q2">2. What is this scheme?</h3>
+                <p>The legal tender character of the existing bank notes in denominations of ₹ 500 and ₹ 1000 issued by the Reserve bank of India till November 8, 2016 (hereinafter referred to as Specified Bank Notes) stands withdrawn. In consequence thereof these Bank Notes cannot be used for transacting business and/or store of value for future usage. The Specified Bank Notes can be exchanged for value at any of the 19 offices of the Reserve Bank of India and deposited at any of the bank branches of commercial banks/ Regional Rural Banks/ Co-operative banks (only Urban Co-operative Banks and State Co-operative Banks) or at any Head Post Office or Sub-Post Office.</p>
+                <p>District Central Cooperative Banks (DCCBs) can allow their existing customers to withdraw money from their accounts upto ₹ 24,000 per week. No exchange facility against the specified bank notes (₹ 500 and ₹ 1000) or deposit of such notes should be entertained by DCCB’s. The Reserve Bank has accordingly advised all banks to permit withdrawal of cash by DCCBs from their accounts based on need.</p>
+
+                <h3 id="q3">3. Does the scheme apply to pre 2005 banknotes of ₹ 500 and ₹ 1000?</h3>
+                <p>Yes, specified banknotes (SBN) include pre 2005 banknotes in the denominations of ₹ 500 and ₹ 1000. Banks should accept deposits of pre-2005 bank notes in the denominations of ₹ 500 and ₹ 1000 under the scheme. However, these notes can be exchanged at RBI Offices only.</p>
+
+                <h3 id="q4">4. How much value will I get?</h3>
+                <p>You will get value for the entire volume of notes tendered at the bank branches / RBI offices.</p>
+
+                <h3 id="q5">5. Can I get all in cash?</h3>
+                <p>The Scheme does not provide for it, given its objectives. You can use balances in bank accounts to pay for other requirements by cheque or through electronic means of payments such as Internet banking, mobile wallets, IMPS, credit/debit cards etc.</p>
+
+                <h3 id="q6">6. Can I get cash in exchange for specified banknotes over the bank counter?</h3>
+                <p>No. Over the counter exchange (in cash) of SB</p>
+                </blockquote>
+
+                <blockquote class="addReview" ng-show="panel.isSelect(5)">
+                    <h3>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.content').hide();
+        $('.final').hide();
+        $('#opener').click(function(){
+            $('.content').show();
+            $('body').css("background-color", "white");
+            $('.sublist').removeClass('selected');
+            $('#opener').hide();
+            $('.starter').hide();
+            $('.final').show();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+body{
+    background-color: black;
+}
+hr{
+    height: 5px;
+    background-color: #7e9c23;
+}
+header{
+    background-color: black;
+    padding: 20px 0px 5px;
+}
+li{
+    margin: 25px 0px;
+}
+blockquote{
+    border-left: solid #61a5d0;
+}
+h1{
+    font-size: 50px;
+    font-family: 'Play', sans-serif;
+}
+h3{
+    font-size: 30px;
+    font-family: 'Alegreya', serif;
+}
+p{
+    font-size: 17px;
+    font-family: 'Handlee', cursive;
+}
+.container{
+    width: 100%;
+}
+.row{
+    margin: 2px;
+}
+.head-img{
+    padding-top: 10px;
+    border-right: 2px solid white;
+}
+.links{
+    padding: 100px 15px;
+    font-family: 'Philosopher', sans-serif;
+
+}
+.starter{
+    padding: 100px 15px;
+    color: #9cb1d0;
+    font-size: 35px;
+    font-family: 'Philosopher', sans-serif;
+}
+#opener{
+    color: #9cb1d0;
+    font-size: 20px;
+}
+.final{
+    padding: 150px 15px;
+    color: #9cb1d0;
+    font-size: 35px;
+    font-family: 'Philosopher', sans-serif;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    background-color: #7e9c23;
+}
+.nav-pills{
+    font-size: 30px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+}
+.sidebar{
+    font-size: 20px;
+    color: black;
+}
+.sublist{
+    color: #255a1c;
+    font-size: 17px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 200;
+}
+#topbutton{
+    position: fixed;
+    top: 50%;
+    right: 0;
+}
+/*<ul class="col-md-3 nav nav-pills nav-stacked text-center links">
+            <li role="presentation" ng-class="{active: panel.isSelect(1)}"><a href ng-click="panel.curTab(1)">ABOUT</a></li>
+            <li role="presentation" ng-class="{active: panel.isSelect(2)}"><a href ng-click="panel.curTab(2)">REACTIONS</a></li>
+            <li role="presentation" ng-class="{active: panel.isSelect(3)}"><a href ng-click="panel.curTab(3)">EFFECTS</a></li>
+            <li role="presentation" ng-class="{active: panel.isSelect(4)}"><a href ng-click="panel.curTab(4)">FAQs</a></li>
+            <li role="presentation" ng-class="{active: panel.isSelect(5)}"><a href ng-click="panel.curTab(5)">ADD YOUR REVIEWS</a></li
+</ul>*/
