@@ -27,7 +27,7 @@
     </header>
     <div class="content container">
         <div class="row">
-            <ul class="col-md-3 sidebar nav nav-pills nav-stacked">
+            <ul class="col-md-3 sidebar nav nav-pills nav-stacked" id="side">
                 <li role="presentation" ng-class="{active: panel.isSelect(1)}"><a href ng-click="panel.curTab(1)">About</a></li>
                 <li role="presentation" ng-class="{active: panel.isSelect(2)}"><a href ng-click="panel.curTab(2)">Reactions</a></li>
                     <ul class="sublist" ng-show="panel.isSelect(2)">
@@ -57,7 +57,7 @@
                 <li role="presentation" ng-class="{active: panel.isSelect(5)}"><a href ng-click="panel.curTab(5)">Add a review</a></li>
             </ul>
             <div class="text col-md-9">
-                <button class="btn btn-default" id="topbutton"><a href="#top">Top</a></button>
+                <a href="#side"><button class="btn btn-default" id="topbutton">Top</button></a>
                 <blockquote class="about" ng-show="panel.isSelect(1)">
                 <h1>About</h1>
                 <hr>
@@ -183,14 +183,31 @@
                 <p>No. Over the counter exchange (in cash) of SB</p>
                 </blockquote>
 
-                <blockquote class="addReview" ng-show="panel.isSelect(5)">
-                    <h3>
+                <blockquote class="addReview" ng-show="panel.isSelect(5)" ng-controller='totalController as all'>
+                    <h1>Reviews</h1>
+                    <hr>
+                    <blockquote ng-repeat="reviewAll in all.review">
+                        {{reviewAll.body}}<br>
+                        --<b>{{reviewAll.author}}</b>
+                    </blockquote>
+                    <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(all)" novalidate>
+                        <blockquote class="review">
+                            {{reviewCtrl.review.body}}<br>
+                            --<b>{{reviewCtrl.review.author}}</b>
+                        </blockquote>
+                        <h3>Submit your Reviews</h3>
+                        <textarea class="form-control" placeholder="Write your review" ng-model="reviewCtrl.review.body" required></textarea>
+                        <input type="email" name="username" class="form-control" placeholder="email@example.com"
+                        ng-model="reviewCtrl.review.author" required>
+                        <input type="submit" id="submit" class="btn btn-default">
+                    </form>
                 </blockquote>
             </div>
         </div>
     </div>
 
     <script>
+        console.log("hello");
         $('.content').hide();
         $('.final').hide();
         $('#opener').click(function(){
